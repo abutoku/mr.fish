@@ -40,7 +40,6 @@ class InfomationController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
 
         // バリデーション
         $validator = Validator::make($request->all(), [
@@ -58,7 +57,8 @@ class InfomationController extends Controller
         }
 
         $result = Infomation::create($request->all());
-  // ルーティング「todo.index」にリクエスト送信（一覧ページに移動）
+
+        session()->flash('status', '登録完了');
         return redirect()->route('infomation.create');
 
     }
