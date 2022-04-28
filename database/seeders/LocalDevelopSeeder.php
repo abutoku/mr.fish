@@ -17,9 +17,8 @@ class LocalDevelopSeeder extends Seeder
 
         \App\Models\User::factory(1)->create([
             'name' => 'admin',
-            'email'=> 'admin@example.com',
+            'email'=> 'admin@sunrise.com',
         ]);
-
 
     }
 }

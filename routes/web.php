@@ -31,4 +31,6 @@ Route::resource('infomation', InfomationController::class);
 
 
 
+
+
 require __DIR__.'/auth.php';
