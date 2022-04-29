@@ -59,8 +59,7 @@ class InfomationController extends Controller
         $result = Infomation::create($request->all());
 
         session()->flash('status', '登録完了');
-        return redirect()->route('infomation.create');
-
+        return redirect()->route('infomation.create')->withInput();
     }
 
     /**

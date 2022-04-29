@@ -20,19 +20,27 @@
     </div>
     @endif
 
+<a href="{{ route('dashboard') }}" class="flex bg-slate-200">
+    <svg class="h-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6" />
+    </svg>
+    <span class="ml-2 text-divenavy ">back</span>
+</a>
+
 <section class="flex justify-center bg-slate-200">
 
     <div class="w-[400px] pt-16">
         <form action="{{ route('infomation.store') }}" method="post" class="ml-4">
             @csrf
                 <p>名前</p>
-                <input type="text" name="name" class="rounded-lg border-2">
+                <input type="text" name="name" class="rounded-lg border-2"">
 
                 <p>目</p>
-                <input type="text" name="order" class="rounded-lg border-2">
+                <input type="text" name="order" class="rounded-lg border-2" value="{{ old('order') }}">
 
                 <p>科</p>
-                <input type="text" name="family" class="rounded-lg border-2">
+                <input type="text" name="family" class="rounded-lg border-2" value="{{ old('family') }}">
                 <br>
                 <x-button class="my-8">登録</x-button>
         </form>
