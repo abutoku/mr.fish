@@ -17,7 +17,7 @@ class CreateInfomationsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('order');
-            $table->string('family');
+            $table->string('family')->nullable();
             $table->timestamps();
         });
     }
