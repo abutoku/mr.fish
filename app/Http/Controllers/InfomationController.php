@@ -44,7 +44,7 @@ class InfomationController extends Controller
         // バリデーション
         $validator = Validator::make($request->all(), [
             'name' => 'required',
-            'order' => 'required',
+            'family' => 'required',
         ]);
 
         // バリデーション:エラー
@@ -54,6 +54,8 @@ class InfomationController extends Controller
                 ->withInput()
                 ->withErrors($validator);
         }
+
+
 
         $result = Infomation::create($request->all());
 

@@ -16,8 +16,8 @@ class CreateInfomationsTable extends Migration
         Schema::create('infomations', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('order');
-            $table->string('family')->nullable();
+            $table->string('order')->nullable();
+            $table->string('family');
             $table->timestamps();
         });
     }
